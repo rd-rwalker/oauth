@@ -3,6 +3,11 @@
 <template>
   <div class="[ hello-world ][ grid ]">
     <h1 class="[ text-center ]">Vue Starter Project</h1>
+    <div class="[ microsoft ][ mx-auto ][ flex flex-row ]">
+    <button @click="login()" class="[ microsoft-btn ][ flex flex-row ][ my-auto ][ rounded-lg ]" >
+      <object type="image/svg+xml" data="https://s3-eu-west-1.amazonaws.com/cdn-testing.web.bas.ac.uk/scratch/bas-style-kit/ms-pictogram/ms-pictogram.svg" class="[ x-icon ][ my-auto ]"></object> 
+      Sign in with Microsoft</button>
+  </div>
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png"
       class="[ logo ][ mx-auto ][ mt-8 ][ w-40 ]"

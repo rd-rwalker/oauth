@@ -1,4 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator';
+import { msalInstance } from '@/config/msalInstance';
 
 @Component({
   components: {},
@@ -25,6 +26,20 @@ class HelloWorldView extends Vue {
   // --------------------------------------------------------------------------
   // [Public] Methods
   // --------------------------------------------------------------------------
+  async login() {
+    const request = {
+      scopes: ['openid', 'profile', 'email'], // Add any additional scopes required by your OAuth provider
+    };
+
+    try {
+      const response = await msalInstance.loginPopup(request);
+      console.log('Login successful', response);
+      // Handle successful login
+    } catch (error) {
+      console.error('Login failed', error);
+      // Handle login error
+    }
+  }
 
   // --------------------------------------------------------------------------
   // [Private] Event Handlers
